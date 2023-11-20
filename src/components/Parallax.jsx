@@ -50,7 +50,7 @@ const Parallax = ({ type }) => {
 };
 
 Parallax.propTypes = {
-  type: PropTypes.func.isRequired,
+  type: PropTypes.string,
 };
 
 export default Parallax;

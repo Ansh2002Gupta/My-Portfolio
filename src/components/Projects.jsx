@@ -104,7 +104,7 @@ const Projects = () => {
 }
 
 Single.propTypes = {
-    item: PropTypes.func.isRequired,
+    item: PropTypes.object.isRequired,
   };
 
 export default Projects;
