@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import me from "../assets/Images/me.png";
 
 const Links = () => {
   const items = ["Homepage", "Projects", "Achivements", "Technical Skills", "Contact"];
@@ -57,7 +58,7 @@ const Links = () => {
 
   return (
     <motion.div className="shadow-lg shadow-black w-[400px] bg-[#000814] h-screen flex flex-col justify-center items-center font-bold text-2xl gap-y-[15px]" variants={variants}>
-        <motion.img variants={imageVariants} className="w-[120px] h-[120px] mb-10 shadow-lg" src="https://github.com/Ansh2002Gupta/My-Portfolio/blob/master/public/me.png" alt="me" />
+        <motion.img variants={imageVariants} className="w-[120px] h-[120px] mb-10 shadow-lg" src={me} alt="me" />
         <svg className="" width="240px" height="240px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)" style={{position: "absolute", top: "45px", left: "80px"}}>
           <g id="SVGRepo_bgCarrier" style={{strokeWidth: "0"}}></g>
           <g id="SVGRepo_tracerCarrier" style={{strokeLineCap: "round", strokeLineJoin: "round", stroke: "#CCCCCC", strokeWidth: "0.288"}}></g>

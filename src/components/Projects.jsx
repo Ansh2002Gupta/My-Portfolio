@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
 import {motion, useInView, useScroll, useSpring} from "framer-motion";
 import { useRef } from "react";
+import Memoir from "../assets/Images/Memoir.png";
+import Distraction from "../assets/Images/Distraction.png";
+import Notedd from "../assets/Images/notedd.png";
+
 
 const items = [
     {
@@ -8,7 +12,7 @@ const items = [
         title: "Memoir: Globally Connected Blogging Platform",
         description: "This is a versatile multiuser application accessible both on computer and mobile phones. Users can create, read, publish, update and deletee their blogs anytime, encapsulating CRUD functionality. It provided a feature `View Author` that allows you to connect more deeply with other authors. App categories the blogs into various thematic sections, enabling users to explore content of their interest. I have used MySQL Workbench as a database management system, storing user details and their blog content. Also developed a REST API, for communication between client and database and used a middleware called Multer for uploading blog and user images into the web application. ",
         technology: ["ReactJs", "JavaScript", "MySQL", "Tailwind CSS"],
-        image: "https://github.com/Ansh2002Gupta/My-Portfolio/blob/master/public/Memoir.png",
+        image: Memoir,
         link: "https://github.com/Ansh2002Gupta/blogapp",
     },
     {
@@ -16,14 +20,14 @@ const items = [
         title: "Notedd: Your Online Personal Note Organizer",
         description: "This app is an ultimate space for securely storing, organising, and sharing notes all in one place. It features a captivating user interface, featuring a Sign-In and Log-In page, on the frontend. Developed a REST API in the backend for user registration and authorization. Also added CRUD functionality that allows users to create, read, update and delete their notes with ease. It uses MongoDB as it's backend database to smoothly manage user notes and keep them readily accessible whenever needed. I have applied Json-Web-Token (J.W.T) security for safe transfer of user details between browser and server.",
         technology: ["ReactJs", "JavaScript", "MongoDB", "Tailwind CSS"],
-        image: "https://github.com/Ansh2002Gupta/My-Portfolio/blob/master/public/notedd.png",
+        image: Notedd,
         link: "https://github.com/Ansh2002Gupta/Notedd",
     },{
         id: 3,
         title: "Distractions: Your Gateway to Gaming Delight",
         description: "Developed a gaming website named Distractions. Created a user sign-in and sign-up page, with proper connections to the backend database. Designed a beautiful user dashboard for displaying high scores, recent plays and tracking achievements. Connected phpmyadmin database for user registration and authorization. Hosted this website on a virtual private server for a period of 2 months (Jan `22 - Feb `22) over the internet.",
         technology: ["PHP", "HTML", "CSS"],
-        image: "https://github.com/Ansh2002Gupta/My-Portfolio/blob/master/public/Distraction.png",
+        image: Distraction,
         link: "https://github.com/Ansh2002Gupta/Gaming_website",
     },
 ];
