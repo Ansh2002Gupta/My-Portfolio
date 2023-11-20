@@ -96,7 +96,7 @@ const Header = () => {
         {/* Smartworking . Passionate . Explorer . Player . Listener */}
       </motion.div>
       <div className="absolute top-3 right-10">
-        <motion.img className="bg-blend-screen shadow-xl shadow-black rounded-full w-[80%]" src="/me.png" alt="This is my image" variants={imageAnimation} initial="initial" animate="animate"></motion.img>
+        <motion.img className="bg-blend-screen shadow-xl shadow-black rounded-full w-[80%]" src="https://github.com/Ansh2002Gupta/My-Portfolio/blob/gh-pages/me.png" alt="This is my image" variants={imageAnimation} initial="initial" animate="animate"></motion.img>
         <svg className="absolute" width="650px" height="650px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)" style={{position: "absolute", top: "-123px", left: "-123px"}}>
           <g id="SVGRepo_bgCarrier" style={{strokeWidth: "0"}}></g>
           <g id="SVGRepo_tracerCarrier" style={{strokeLineCap: "round", strokeLineJoin: "round", stroke: "#CCCCCC", strokeWidth: "0.288"}}></g>
