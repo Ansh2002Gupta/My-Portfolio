@@ -82,11 +82,11 @@ const Contact = () => {
     <div ref={ref} className="flex flex-col-reverse md:flex-row justify-center items-center bg-gradient-to-b from-[#000814] to-[#003566] h-screen gap-6 pb-8 sm:pb-0">
       <motion.div variants={lineAnimation} initial="initial" animate={isInView && "animate"} className="hidden lg:block w-[1%] h-[60%] rounded-full bg-[#ffc300]"></motion.div>
       <motion.div className="ml-0 px-8 sm:px-0" variants={posterAnimation} initial="initial" animate="animate">
-        <motion.h1 className="text-6xl md:text-7xl font-bold text-[#000814]">
-          Intrested <span className="text-3xl text-[#003566]">in me</span>
+        <motion.h1 variants={posterAnimation} className="text-6xl md:text-7xl font-bold text-[#000814]">
+          Intrested <span className="text-3xl md:text-[#003566] text-[#001D3D] font-bold">in me</span>
         </motion.h1>
-        <motion.h2 variants={posterAnimation} className="text-2xl md:text-3xl font-bold text-[#003566]">
-          Contact me by sending an <span className="text-6xl md:text-7xl text-[#000814]">email.</span>
+        <motion.h2 variants={posterAnimation} className="text-2xl md:text-3xl font-bold md:text-[#003566] text-[#001D3D]">
+          Contact me by sending an <span className="text-6xl md:text-7xl text-[#000814] font-bold">email.</span>
         </motion.h2>
         <motion.div variants={posterAnimation} initial="initial" animate={isInView && "animate"} className="mt-5 py-2 h-auto flex flew-row gap-4 sm:justify-between items-center md:flex-col md:items-start md:gap-1">
           <div>

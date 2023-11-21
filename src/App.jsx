@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Parallax from "./components/Parallax";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-// import Projects from "./components/Projects";
 import Navbar from "./components/navbar";
 
 const App = () => {
@@ -17,13 +16,19 @@ const App = () => {
       <section id="Projects">
         <Parallax type="Projects" />
       </section>
-      <Projects/>
+      <Projects />
       <section id="Other">
         <Parallax types="Other" />
       </section>
-      <section id="Technical Skills"><Skills/></section>
-      <section id="Achivements"><Achivements/></section>
-      <section id="Contact"><Contact/></section>
+      <section id="Technical Skills">
+        <Skills />
+      </section>
+      <section id="Achivements">
+        <Achivements />
+      </section>
+      <section id="Contact">
+        <Contact />
+      </section>
     </div>
   );
 };
