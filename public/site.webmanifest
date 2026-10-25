@@ -1,0 +1,15 @@
+{
+  "name": "Ansh Gupta — Frontend Software Engineer",
+  "short_name": "Ansh Gupta",
+  "description": "Portfolio of Ansh Gupta, Frontend Software Engineer.",
+  "start_url": "/My-Portfolio/",
+  "scope": "/My-Portfolio/",
+  "display": "browser",
+  "background_color": "#FAF8F4",
+  "theme_color": "#FAF8F4",
+  "icons": [
+    { "src": "/My-Portfolio/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/My-Portfolio/favicon-96.png", "type": "image/png", "sizes": "96x96" },
+    { "src": "/My-Portfolio/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" }
+  ]
+}

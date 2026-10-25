@@ -1,0 +1,89 @@
+/*
+ * Design tokens.
+ *
+ * Colours are stored as space-separated sRGB channels so Tailwind can apply
+ * opacity modifiers (`text-ink/70`). Every token is defined once for the light
+ * ("paper") theme and overridden for the dark ("ink") theme; nothing is allowed
+ * to exist only inside a theme block.
+ *
+ * Contrast was verified against WCAG 2.1: body/heading pairs clear 4.5:1,
+ * control borders clear 3:1.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces, lightest to most recessed */
+  --c-bg: 250 248 244; /* #FAF8F4 warm paper */
+  --c-surface: 255 255 255; /* #FFFFFF */
+  --c-raised: 242 239 232; /* #F2EFE8 */
+
+  /* Text */
+  --c-ink: 20 23 29; /* #14171D   16.9:1 on bg */
+  --c-muted: 82 88 106; /* #52586A   6.7:1 on bg */
+  --c-subtle: 102 107 119; /* #666B77   5.0:1 on bg */
+
+  /* Hairlines. `line` is decorative, `line-strong` is for control borders. */
+  --c-line: 228 223 212; /* #E4DFD4 */
+  --c-line-strong: 140 133 116; /* #8C8574  3.5:1 on bg */
+
+  /* Accents: deep navy carries structure, brass marks measured results. */
+  --c-accent: 27 58 104; /* #1B3A68  10.7:1 on bg */
+  --c-accent-contrast: 255 255 255; /* text on a filled accent surface */
+  --c-accent-soft: 233 238 247; /* #E9EEF7 */
+  --c-brass: 126 95 16; /* #7E5F10  5.6:1 on bg */
+  --c-brass-soft: 246 239 217; /* #F6EFD9 */
+
+  /* Feedback */
+  --c-positive: 22 101 64; /* #166540 */
+  --c-critical: 155 36 36; /* #9B2424 */
+
+  /* Radii and elevation live in the Tailwind @theme block in src/index.css so
+     that `rounded-md` / `shadow-md` resolve to the same values; only the dark
+     overrides belong here. */
+
+  /* Layout */
+  --header-h: 60px;
+  --container: 76rem; /* 1216px */
+
+  /* Motion — one easing curve and three durations across the whole site. */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur-mid: 240ms;
+  --dur-slow: 620ms;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --c-bg: 12 14 18; /* #0C0E12 */
+  --c-surface: 19 22 28; /* #13161C */
+  --c-raised: 26 30 38; /* #1A1E26 */
+
+  --c-ink: 237 235 229; /* #EDEBE5  16.2:1 on bg */
+  --c-muted: 164 170 182; /* #A4AAB6  8.3:1 on bg */
+  --c-subtle: 134 140 152; /* #868C98  5.7:1 on bg */
+
+  --c-line: 36 41 50; /* #242932 */
+  --c-line-strong: 106 113 128; /* #6A7180  3.9:1 on bg */
+
+  --c-accent: 143 179 236; /* #8FB3EC  9.0:1 on bg */
+  --c-accent-contrast: 12 14 18;
+  --c-accent-soft: 21 35 58; /* #15233A */
+  --c-brass: 216 180 95; /* #D8B45F  9.8:1 on bg */
+  --c-brass-soft: 42 35 20; /* #2A2314 */
+
+  --c-positive: 109 199 155;
+  --c-critical: 240 148 148;
+
+  /* Shadows need more opacity to read against a dark ground. */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 6px 20px -8px rgb(0 0 0 / 0.6), 0 2px 6px -3px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 24px 56px -28px rgb(0 0 0 / 0.75);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-h: 72px;
+  }
+}

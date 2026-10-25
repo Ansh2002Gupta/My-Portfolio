@@ -1,36 +1,46 @@
-import Achivements from "./components/Achivements";
-import Contact from "./components/Contact";
-import Header from "./components/Header";
-import Parallax from "./components/Parallax";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Navbar from "./components/navbar";
+import SiteFooter from './components/layout/SiteFooter';
+import SiteHeader from './components/layout/SiteHeader';
+import About from './components/sections/About';
+import Contact from './components/sections/Contact';
+import Experience from './components/sections/Experience';
+import Hero from './components/sections/Hero';
+import Projects from './components/sections/Projects';
+import Recognition from './components/sections/Recognition';
+import Skills from './components/sections/Skills';
+import Work from './components/sections/Work';
+import { useInitialHashScroll, useRevealOnScroll } from './lib/hooks';
 
-const App = () => {
+/**
+ * Single-page layout. Section order matches site.nav, which drives both the
+ * navigation and the active-section tracking, so the two cannot drift apart.
+ *
+ * No section is clamped to the viewport height and there is no scroll
+ * snapping — every section is as tall as its content needs to be.
+ */
+export default function App() {
+  useRevealOnScroll();
+  useInitialHashScroll();
+
   return (
-    <div>
-      <section id="Homepage">
-        <Navbar />
-        <Header />
-      </section>
-      <section id="Projects">
-        <Parallax type="Projects" />
-      </section>
-      <Projects />
-      <section id="Other">
-        <Parallax types="Other" />
-      </section>
-      <section id="Technical Skills">
-        <Skills />
-      </section>
-      <section id="Achivements">
-        <Achivements />
-      </section>
-      <section id="Contact">
-        <Contact />
-      </section>
-    </div>
-  );
-};
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
 
-export default App;
+      <SiteHeader />
+
+      <main id="main">
+        <Hero />
+        <About />
+        <Experience />
+        <Work />
+        <Projects />
+        <Skills />
+        <Recognition />
+        <Contact />
+      </main>
+
+      <SiteFooter />
+    </>
+  );
+}
