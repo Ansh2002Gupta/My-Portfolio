@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ansh2002gupta.github.io/My-Portfolio/sitemap.xml
